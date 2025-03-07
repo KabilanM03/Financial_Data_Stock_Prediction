@@ -6,7 +6,7 @@ A predictive model for forecasting **Tesla Inc. (TSLA) stock prices** using a co
 
 ## **1. Project Overview**
 
-This project explores the application of **machine learning models** for predicting financial data, specifically **Tesla Inc. (TSLA) stock prices**. It integrates **traditional statistical methods (ARIMA)** and **modern machine learning techniques (XGBoost and Transformers)** to build a **robust predictive model**. The aim is to address the complexities of financial forecasting by incorporating **both linear and non-linear modelling approaches**.
+This project explores the application of **machine learning models** for predicting financial data, specifically **Tesla Inc. (TSLA) stock prices**. It integrates **traditional statistical methods (ARIMA)** and **modern machine learning techniques (XGBoost and Transformers)** to build a **robust predictive model**. The aim is to address the complexities of financial forecasting by incorporating **both linear and non-linear modeling approaches**.
 
 ---
 
@@ -14,7 +14,7 @@ This project explores the application of **machine learning models** for predict
 
 The system leverages the following technologies:
 
-### **Time Series Modelling**
+### **Time Series Modeling**
 
 - **ARIMA (AutoRegressive Integrated Moving Average)** – Captures linear time series trends and patterns.
 - **XGBoost (Extreme Gradient Boosting)** – Handles non-linear relationships and enhances model performance.
@@ -23,11 +23,11 @@ The system leverages the following technologies:
 ### **Data Processing**
 
 - **Python (Pandas, NumPy, Scikit-Learn)** – Data manipulation, preprocessing, and feature engineering.
-- **Matplotlib & Seaborn** – Data visualisation and performance evaluation.
+- **Matplotlib & Seaborn** – Data visualization and performance evaluation.
 
 ### **Model Training & Evaluation**
 
-- **Cross-validation & Hyperparameter Tuning** – Ensures generalisation and prevents overfitting.
+- **Cross-validation & Hyperparameter Tuning** – Ensures generalization and prevents overfitting.
 - **Mean Squared Error (MSE) & Mean Absolute Error (MAE)** – Evaluates model accuracy.
 
 ---
@@ -57,42 +57,19 @@ Traditional time series forecasting models like **ARIMA** struggle to capture **
    - Uses **differencing** to address non-stationarity.
    - Defined by the equation:
 
-     $$
-     y_t = c + \sum_{i=1}^{p} \phi_i y_{t-i} + \sum_{i=1}^{q} \theta_i \epsilon_{t-i} + \epsilon_t
-     $$
-
-     Where:
-
-     - \( y_t \) is the differenced time series.
-     - \( \phi_i \) are autoregressive coefficients.
-     - \( \theta_i \) are moving average coefficients.
-     - \( \epsilon_t \) is the error term.
 
 2. **XGBoost (Extreme Gradient Boosting)**
 
    - Addresses **non-linear relationships** in financial data.
-   - Prevents **overfitting** by applying **regularisation**.
+   - Prevents **overfitting** by applying **regularization**.
    - Objective function:
 
-     $$
-     \text{Obj}(\theta) = \sum_{i=1}^{n} l(y_i, \hat{y}_i) + \sum_{k=1}^{K} \Omega(f_k)
-     $$
-
-     $$
-     \Omega(f_k) = \gamma T + \frac{1}{2} \lambda \sum_{j=1}^{T} w_j^2
-     $$
-
-     Where:
-
-     - \( l(y_i, \hat{y}_i) \) is the loss function.
-     - \( \Omega(f_k) \) is the regularisation term.
-     - \( \gamma \) and \( \lambda \) are hyperparameters controlling model complexity.
 
 3. **Transformer-based Neural Networks**
 
    - Uses **self-attention mechanisms** to capture long-term dependencies.
    - Adapts well to **non-stationary and volatile** financial data.
-   - Effective in modelling **complex temporal structures**.
+   - Effective in modeling **complex temporal structures**.
 
 ---
 
@@ -103,12 +80,12 @@ Throughout the project, several challenges were encountered:
 ### **Handling Non-Stationary Data**
 
 - Financial markets are inherently **dynamic**, with constantly changing statistical properties.
-- Applied **differencing** and **data transformations** to stabilise the time series.
+- Applied **differencing** and **data transformations** to stabilize the time series.
 
-### **Overfitting and Model Generalisation**
+### **Overfitting and Model Generalization**
 
 - **Cross-validation** was implemented to improve model robustness.
-- **Hyperparameter tuning** (GridSearchCV, RandomizedSearchCV) was used to optimise model parameters.
+- **Hyperparameter tuning** (GridSearchCV, RandomizedSearchCV) was used to optimize model parameters.
 
 ### **Volatility of Tesla Stock**
 
@@ -125,17 +102,9 @@ To assess model accuracy, the following metrics were used:
 
    - Measures the average squared difference between predicted and actual values.
 
-     $$
-     \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
-     $$
-
 2. **Mean Absolute Error (MAE)**
 
    - Provides an intuitive measure of prediction accuracy.
-
-     $$
-     \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
-     $$
 
 ### **Model Comparison**
 
@@ -151,16 +120,16 @@ Several areas for improvement were identified:
 ### **Enhancing Feature Engineering**
 
 - Incorporating additional features such as **macroeconomic indicators** and **sentiment analysis** from financial news articles.
-- Applying **technical indicators (e.g., moving averages, RSI, Bollinger Bands)**.
+- Applying **technical indicators** (e.g., moving averages, RSI, Bollinger Bands).
 
-### **Advanced Hyperparameter Optimisation**
+### **Advanced Hyperparameter Optimization**
 
-- Implementing **Bayesian Optimisation** for improved hyperparameter selection.
+- Implementing **Bayesian Optimization** for improved hyperparameter selection.
 - Expanding **GridSearchCV & RandomizedSearchCV** trials.
 
 ### **Deep Learning Exploration**
 
 - Experimenting with **Long Short-Term Memory (LSTM) networks** for capturing long-term dependencies in financial data.
-- Implementing **regularisation techniques** (dropout) to prevent overfitting.
+- Implementing **regularization techniques** (dropout) to prevent overfitting.
 
 ---
